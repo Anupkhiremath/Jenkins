@@ -6,6 +6,7 @@ pipeline {
            steps {
             sh '''
               echo "run on slave1"
+                sleep 10
                '''
 }
 }
@@ -14,6 +15,7 @@ pipeline {
           steps {
            sh '''
               echo "run on master"
+               sleep 10
                '''  
 }
 }
