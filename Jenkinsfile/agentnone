@@ -10,7 +10,7 @@ pipeline {
 }
 }
       stage('stage2') {
-        agent { agent 'master'}
+        agent { label 'master'}
           steps {
            sh '''
               echo "run on master"
