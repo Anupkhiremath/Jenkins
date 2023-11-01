@@ -4,9 +4,12 @@ pipeline {
       stage('stage1') {
         steps {
             sh 'touch stage1file'
-            
-        }
-        
-      }  
-    }
+         }
+       }
+        stage('stage2'){
+          steps {
+              sh 'touch stage2file'
+}
+  }
+}
   }
