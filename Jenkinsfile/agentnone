@@ -7,14 +7,14 @@ pipeline {
             sh '''
               echo "run on slave1"
                '''
+}
+}
       stage('stage2') {
         agent { agent 'master'}
           steps {
            sh '''
               echo "run on master"
-               '''
-} 
-}    
+               '''  
 }
 }
 }
