@@ -9,6 +9,7 @@ pipeline {
 			stage ('1') {
 				steps {
 					sh '''
+						#!/bin/bash
 						if [[ $Environemnt -eq T ]];then
 							echo "Deploying in test environmet"
 						elif [[ $Environemnt -eq P ]];then
