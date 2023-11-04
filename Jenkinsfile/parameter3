@@ -1,1 +1,26 @@
+pipeline {
+ agent any
+	parameters	{
+		string: 'Environemnt',
+		defaultvalue: 'T'
+		description:Enter a the environmet name you want to run
+	}
+		stages {
+			stage (1){
+				steps {
+					sh '''
+						if [[ $Environemnt -eq T ]];then
+							echo "Deploying in test environmet"
+						elif [[ $Environemnt -eq P ]];then
+							echo "Deploying in production environmet"
+						else 
+							echo "mention valid Environemnt name"
+						
+					'''
+				
+			}
+			
+		}
+	}
 
+}
