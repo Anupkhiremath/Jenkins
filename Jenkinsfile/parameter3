@@ -1,7 +1,7 @@
 pipeline {
  agent any
 	parameters	{
-		string name: 'Environemnt',
+		string name: 'Environment',
 		defaultValue: 'T'
 		
 	}
@@ -10,9 +10,9 @@ pipeline {
 				steps {
 					sh '''
 						#!/bin/bash
-						if [[ $Environemnt -eq T ]];then
+						if [[ $Environment -eq T ]];then
 							echo "Deploying in test environmet"
-						elif [[ $Environemnt -eq P ]];then
+						elif [[ $Environment -eq P ]];then
 							echo "Deploying in production environmet"
 						else 
 							echo "mention valid Environemnt name"
