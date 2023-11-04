@@ -3,7 +3,7 @@ pipeline {
 	parameters	{
 		string name: 'Environemnt',
 		defaultValue: 'T'
-		description: 'Input the environment to deploy'
+		
 	}
 		stages {
 			stage ('1') {
