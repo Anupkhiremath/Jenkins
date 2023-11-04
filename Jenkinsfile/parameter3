@@ -6,7 +6,7 @@ pipeline {
 		description: Enter a the environmet name you want to run
 	}
 		stages {
-			stage (1) {
+			stage ('1') {
 				steps {
 					sh '''
 						if [[ $Environemnt -eq T ]];then
